@@ -4,6 +4,8 @@ public class iphone {
         myPhone.playSong("Stairway to Heaven");
         myPhone.makeCall("555-1234");
         myPhone.openWebPage( );
+
+        System.out.println("MISA");
     }
 }
 
