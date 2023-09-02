@@ -21,9 +21,9 @@ class Iphone {
 }
 class NavegadorInternet {
 <<Interface>>
-  + adicionarNovaAba() void
-  + exibirPagina(String) void
-  + atualizarPagina() void
+  + exibirPagina() void
+  + adicionarPagina(String) void
+  + excluirPagina() void
 }
 class ReprodutorMusical {
 <<Interface>>
