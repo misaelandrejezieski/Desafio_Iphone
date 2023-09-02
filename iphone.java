@@ -1,88 +1,80 @@
-public class iphone {
-    public static void main(String[] args) {
-        iPhone myPhone = new iPhone();
-        myPhone.playSong("Stairway to Heaven");
-        myPhone.makeCall("555-1234");
-        myPhone.openWebPage( );
-
-        System.out.println("MISA");
-    }
+interface AparelhoTelefonico {
+    void ligar(String numero);
+    void atender();
+    void desligarCorreioVoz();
 }
 
-public interface MusicPlayer {
-    void playSong(String songTitle);
-    void pauseSong();
-    void stopSong();
-    void skipToNextSong();
-    void skipToPreviousSong();
+interface NavegadorInternet {
+    void exibirPagina();
+    void adicionarPagina(String url);
+    void excluirPagina();
 }
-public interface Telephone {
-    void makeCall(String phoneNumber);
-    void endCall();
-    void answerCall();
-    void rejectCall();
+
+interface ReprodutorMusical {
+    void selecionarMusica(String musica);
+    void tocar();
+    void pausar();
 }
-public interface InternetBrowser {
-    void openWebPage(String url);
-    void closeWebPage();
-    void refreshWebPage();
-    void goBack();
-    void goForward();
+
+class Iphone implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusical {
+    private String paginaWeb;
+    private String musica;
+
+    public void ligar(String numero) {
+        // implementação do método ligar
+        System.out.println("Ligando para o número: " + numero);
+    }
+
+    public void atender() {
+        // implementação do método atender
+    }
+
+    public void desligarCorreioVoz() {
+        // implementação do método desligarCorreioVoz
+    }
+
+    public void exibirPagina() {
+        // implementação do método exibirPagina
+        System.out.println("Exibindo a página: " + paginaWeb);
+    }
+
+    public void adicionarPagina(String url) {
+        // implementação do método adicionarPagina
+        paginaWeb = url;
+        System.out.println("Adicionando a página: " + url);
+    }
+
+    public void excluirPagina() {
+        // implementação do método excluirPagina
+        System.out.println("Excluindo a página: " + paginaWeb);
+        paginaWeb = null;
+    }
+
+    public void selecionarMusica(String musica) {
+        // implementação do método selecionarMusica
+        this.musica = musica;
+        System.out.println("Selecionando a música: " + musica);
+    }
+
+    public void tocar() {
+        // implementação do método tocar
+        System.out.println("Tocando a música: " + musica);
+    }
+
+    public void pausar() {
+        // implementação do método pausar
+        System.out.println("Pausando a música: " + musica);
+    }
 }
-public class iPhone implements MusicPlayer, Telephone, InternetBrowser {
-    private String songTitle;
-    private String phoneNumber;
-    private String url;
-    @Override
-    public void playSong(String songTitle) {
-        this.songTitle = songTitle;
-        // Play the song
-    }
-    @Override
-    public void pauseSong() {
-        // Pause the song
-    }
-    @Override
-    public void stopSong() {
-        // Stop the song
-    }
-    @Override
-    public void skipToNextSong() {
-        // Skip to the next song
-    }
-    @Override
-    public void skipToPreviousSong() {
-        // Skip to the previous song
-    }
-    @Override
-    public void makeCall(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        // Make the call
-    }
-    @Override
-    public void endCall() {
-        // End the call
-    }
-    @Override
-    public void answerCall() {
-        // Answer the call
-    }
-    @Override
-    public void rejectCall() {
-        // Reject the call
-    }
-    @Override
-    public void openWebPage(String url) {
-        this.url = url;
-        // Open the web page
-    }
-    @Override
-    public void closeWebPage() {
-        // Close the web page
-    }
-    
-    @Override
-public void refreshWebPage() {
-    // Refresh the current web page
-    }
+
+public class Main {
+  public static void main(String[] args) {
+      Iphone iphone = new Iphone();
+      iphone.ligar("123456789");
+      iphone.adicionarPagina("https://www.bing.com");
+      iphone.exibirPagina();
+      iphone.selecionarMusica("Minha música favorita");
+      iphone.tocar();
+      iphone.pausar();
+  }
 }
