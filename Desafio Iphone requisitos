@@ -4,7 +4,7 @@ class AparelhoTelefonico {
 <<Interface>>
   + ligar(String) void
   + atender() void
-  + iniciarCorreioVoz() void
+  + desligarCorreioVoz() void
 }
 class Iphone {
   - String paginaWeb
@@ -12,9 +12,9 @@ class Iphone {
   + ligar(String) void
   + atender() void
   + iniciarCorreioVoz() void
-  + adicionarNovaAba() void
+  + adicionarPagina() void
   + exibirPagina(String) void
-  + atualizarPagina() void
+  + excluirPagina() void
   + selecionarMusica(String) void
   + tocar() void
   + pausar() void
@@ -32,6 +32,6 @@ class ReprodutorMusical {
   + pausar() void
 }
 
-Iphone  ..>  AparelhoTelefonico 
-Iphone  ..>  NavegadorInternet 
-Iphone  ..>  ReprodutorMusical 
+Iphone  ..>  AparelhoTelefone
+Iphone  ..>  NavegarInternet 
+Iphone  ..>  ReprodutorMusica
