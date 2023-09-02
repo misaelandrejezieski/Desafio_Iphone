@@ -1,36 +1,3 @@
 # Desafio_Iphone
 
-```
-require 'redcarpet'
-markdown = Redcarpet.new("DIO.ME")
-puts markdown.to_html
-´´´
-
-Desafio da trilha básica de java do BootCamp DIO-SANTADER
-
-   ```
-classDiagram
-    class Iphone {
-        ReprodutorMusica reprodutorMusica
-        AparelhoTelefone aparelhoTelefone
-        NavegarInternet navegarInternet
-    }
-    class ReprodutorMusica {
-        +selecionarMusica()
-        +tocar()
-        +pausar()
-    }
-    class AparelhoTelefone {
-        +ligar()
-        +atender()
-        +desligar()
-    }
-    class NavegarInternet {
-        +exibirPagina()
-        +adicionarPagina()
-        +excluirPagina()
-    }
-    Iphone --> ReprodutorMusica
-    Iphone --> AparelhoTelefone
-    Iphone --> NavegarInternet
-
+![image](https://github.com/misaelandrejezieski/Desafio_Iphone/assets/142842224/17ff41d8-96d9-4239-b860-2e16cc1edca2)
